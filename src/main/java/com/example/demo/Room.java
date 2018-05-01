@@ -13,8 +13,15 @@ public class Room {
     private String address;
     private  String city;
     private  String state;
-    private  String price;
+    private  long price;
     private boolean isRented;
+    private  String description;
+    private boolean rule;
+    private boolean wifi;
+    private  boolean privateBath;
+    private  long  cable;
+
+
 
     public long getId() {
         return id;
@@ -48,13 +55,6 @@ public class Room {
         this.state = state;
     }
 
-    public String getPrice() {
-        return price;
-    }
-
-    public void setPrice(String price) {
-        this.price = price;
-    }
 
     public boolean isRented() {
         return isRented;
@@ -62,5 +62,49 @@ public class Room {
 
     public void setRented(boolean rented) {
         isRented = rented;
+    }
+
+    public void setPrice(long price) {
+        this.price = price;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public boolean isRule() {
+        return rule;
+    }
+
+    public void setRule(boolean rule) {
+        this.rule = rule;
+    }
+
+    public boolean isWifi() {
+        return wifi;
+    }
+
+    public void setWifi(boolean wifi) {
+        this.wifi = wifi;
+    }
+
+    public boolean isPrivateBath() {
+        return privateBath;
+    }
+
+    public void setPrivateBath(boolean privateBath) {
+        this.privateBath = privateBath;
+    }
+
+    public long getCable() {
+        return cable;
+    }
+
+    public void setCable(long cable) {
+        this.cable = cable;
     }
 }
