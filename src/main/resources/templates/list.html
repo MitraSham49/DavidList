@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!--This application includes thymeleaf extras for Spring security. Using these, you can change the way your page renders
-depending on the user who is (or is not) logged in. -->
+
 <!--<html lang="en" xmlns:th="www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org.thymeleaf-extras-springsecurity4">
 -->
 <html lang="en" xmlns:th="www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8"/>
     <title>Title</title>
@@ -35,29 +35,7 @@ depending on the user who is (or is not) logged in. -->
     </nav>
 </div>
 
-<!--Read through this code and correct the mistakes-->
-<h1 >Welcome to Room rental page!</h1>
-<!--  <h2 sec:authorize="isAnonymous()">Users who are not logged in can see this message</h2>-->
-<!--<h2 sec:authorize="isAuthenticated()">Hello!</h2>-->
-<!--<h2 sec:authorize="isAuthenticated()" th:inline="text">Hello! [[${#authentication.name}]] , you are logged in! </h2>
--->
-<!--   <h3>Everyone can see this message, whether they are logged in or not</h3>-->
-<!--   <h3 sec:authorize="hasAuthority('ADMIN')">If you are an admin user you will see this</h3>-->
-<!--This will show 'anonymousUser' if the user is not logged in. Change this so that it only displays the name of the user if they are logged in.-->
-<!-- <h3 sec:authentication="name"></h3>-->
 
-<!--  <h3 sec:authorize="isAuthenticated()" th:inline="text">[[${#authentication.name}]] is the user you are logged in as. Look at this syntax to see how it displays differently.</h3>-->
-<!--  <h4 th:inline="text" th:if="${#authentication.name}=='Alton'">Display this only if the authenticated user is Alton, whose password should be $pass</h4>-->
-<div th:each="eachRoom:${allrooms}">
-    <p th:text="${eachRoom.address}"></p>
-    <p th:text="${eachRoom.city}"></p>
-    <p th:text="${eachRoom.description}"></p>
-    <p th:text="${eachRoom.rule}"></p>
-    <p th:text="${eachRoom.wifi}"></p>
-    <p th:text="${eachRoom.privateBath}"></p>
-    <p th:text="${eachRoom.cable}"></p>
-
-</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>

@@ -19,24 +19,25 @@ public class MainController {
      @RequestMapping("/")
     public  String listRoom (Model model) {
          model.addAttribute("rooms", roomRep.findAll());
-       return"list" ;
+       return"index" ;
      }
 
 
-     @GetMapping("/add")
+     @GetMapping("/addroom")
     public  String newRoom(Model model){
          model.addAttribute("room", new Room());
-         return "form";
+         return "list";
      }
 
     @RequestMapping("/save")
-    public  String saveRoom (@Valid @ModelAttribute("aRoom") Room toSave, BindingResult result){
+    public  String saveRoom (@Valid @ModelAttribute("aRoom") Room room, BindingResult result){
         if (result.hasErrors()){
-            return"add";
+            return"addroom";
         }
 
-        roomRep.save (toSave);
-        return "redirect:/";
+
+        roomRep.save (room);
+        return "redirect:/index";
     }
 
 }
